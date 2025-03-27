@@ -64,9 +64,8 @@
 
 ##### Modules ######
 !crates/
-!crates/lib
-!crates/cli
-!crates/os
+!crates/lib/
+!crates/lib/**/
 !crates/**/src
 !crates/**/testdata
 

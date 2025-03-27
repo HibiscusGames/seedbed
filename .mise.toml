@@ -1,8 +1,8 @@
 [tools]
-lefthook = "1.11.3"
+lefthook = "1.11.5"
 markdownlint-cli2 = "0.17.2"
-gh = "2.68.1"
-bun = "1.2.5"
+gh = "2.69.0"
+bun = "1.2.7"
 
 [task_config]
 includes = [

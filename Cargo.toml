@@ -1,0 +1,31 @@
+[workspace]
+resolver = "3"
+members = ["crates/lib/core"]
+
+[workspace.package]
+version = "0.1.0"
+authors = [
+    "Pierre Fouilloux",
+    "Hibiscus Games <dev@hibiscusgames.com>",
+]
+edition = "2024"
+rust-version = "1.85"
+categories = ["game-development", "game-engines"]
+description = "A game engine specialised for turn-based games backed by event-sourcing and ECS."
+documentation = "https://docs.rs/tomatillo"
+readme = "README.md"
+homepage = "https://github.com/HibiscusCollective/tomatillo"
+repository = "https://www.github.com/HibiscusCollective/tomatillo"
+license = "AGPL-3.0-or-later"
+keywords = ["game-engine", "gamedev", "2d", "turn-based", "ecs", "event-sourcing"]
+publish = true
+
+[workspace.lints.clippy]
+style = "deny"
+complexity = "deny"
+perf = "deny"
+restriction = "warn"
+pedantic = "warn"
+
+[workspace.dependencies]
+libseedbed-core = { version = "*", path = "./crates/lib/core" }
