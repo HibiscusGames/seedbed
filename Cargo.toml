@@ -4,10 +4,7 @@ members = ["crates/lib/core"]
 
 [workspace.package]
 version = "0.1.0"
-authors = [
-    "Pierre Fouilloux",
-    "Hibiscus Games <dev@hibiscusgames.com>",
-]
+authors = ["Pierre Fouilloux", "Hibiscus Games <dev@hibiscusgames.com>"]
 edition = "2024"
 rust-version = "1.85"
 categories = ["game-development", "game-engines"]
@@ -17,15 +14,24 @@ readme = "README.md"
 homepage = "https://github.com/HibiscusCollective/tomatillo"
 repository = "https://www.github.com/HibiscusCollective/tomatillo"
 license = "AGPL-3.0-or-later"
-keywords = ["game-engine", "gamedev", "2d", "turn-based", "ecs", "event-sourcing"]
+keywords = [
+    "game-engine",
+    "gamedev",
+    "2d",
+    "turn-based",
+    "ecs",
+    "event-sourcing",
+]
 publish = true
 
 [workspace.lints.clippy]
-style = "deny"
-complexity = "deny"
-perf = "deny"
-restriction = "warn"
-pedantic = "warn"
+complexity = { level = "deny", priority = -1 }
+perf = { level = "deny", priority = -1 }
+style = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+needless_return = "allow"
+arbitrary_source_item_ordering = "allow"
+self_named_module_files = "allow"
 
 [workspace.dependencies]
 libseedbed-core = { version = "*", path = "./crates/lib/core" }
